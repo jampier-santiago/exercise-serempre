@@ -8,12 +8,8 @@
     "build": "webpack --config config/webpack.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint ./",
-    "lint:fix": "eslint ./ --fix"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "lint:fix": "eslint ./ --fix",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "src/**/*.{html, ts, js, jsx, json, css, scss}": [
