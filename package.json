@@ -10,6 +10,17 @@
     "lint": "eslint ./",
     "lint:fix": "eslint ./ --fix"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,scss}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
