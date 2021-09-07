@@ -1,6 +1,6 @@
 // Dependecies
 import React, { useEffect, useState, useMemo } from "react";
-// import tw from "twin.macro";
+import tw from "twin.macro";
 
 // Components
 import Nav from "../components/Nav";
