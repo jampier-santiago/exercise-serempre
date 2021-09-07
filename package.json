@@ -11,6 +11,9 @@
     "lint:fix": "eslint ./ --fix",
     "prepare": "husky install"
   },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "npx lint-staged"

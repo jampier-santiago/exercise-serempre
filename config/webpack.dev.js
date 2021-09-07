@@ -1,15 +1,16 @@
-const { merge } = require("webpack-merge");
-const common = require("./webpack.common");
-const path = require("path");
+import { merge } from "webpack-merge";
+import common from "./webpack.common";
+import { join } from "path";
 
-const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
-const { HotModuleReplacementPlugin } = require("webpack");
+// import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
+// import { HotModuleReplacementPlugin } from "webpack";
 
 const devConfig = {
   mode: "development",
   devServer: {
     port: 3000,
-    static: { directory: path.join(__dirname, "build") },
+    // eslint-disable-next-line no-undef
+    static: { directory: join(__dirname, "build") },
     open: true,
     hot: true,
   },
@@ -17,4 +18,4 @@ const devConfig = {
   devtool: "eval-source-map",
 };
 
-module.exports = merge(common, devConfig);
+export default merge(common, devConfig);
