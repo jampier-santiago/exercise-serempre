@@ -1,5 +1,6 @@
 // Dependecies
 import React, { useEffect, useState, useMemo } from "react";
+// import tw from "twin.macro";
 
 // Components
 import Nav from "../components/Nav";
@@ -18,6 +19,7 @@ import Price from "../context/Price";
 import iconHand from "../assets/images/iconHand.png";
 import iconActiveNoise from "../assets/images/iconActiveNoise.png";
 import iconEqualizer from "../assets/images/iconEqualizer.png";
+// import styled from "styled-components";
 
 export default function Main() {
   const [price, setPrice] = useState(295.95);
