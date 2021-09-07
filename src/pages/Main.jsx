@@ -1,5 +1,5 @@
 // Dependecies
-import React, { useEffect, useState, useMemo } from "react";
+import { useEffect, useState, useMemo } from "react";
 // import tw from "twin.macro";
 
 // Components
@@ -25,7 +25,6 @@ export default function Main() {
   const [price, setPrice] = useState(295.95);
   const priceData = useMemo(() => ({ price, setPrice }), [price]);
 
-  const user = "...";
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
