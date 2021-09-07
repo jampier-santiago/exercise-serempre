@@ -19,7 +19,7 @@
   },
   "rules": {
     "react/jsx-uses-react": "error",
-    "max-nested-callbacks": ["warn", 3],
-    "react/jsx-uses-vars": "error"
+    "react/jsx-uses-vars": "error",
+    "max-nested-callbacks": ["warn", 3]
   }
 }
