@@ -1,14 +1,14 @@
 {
   "parser": "babel-eslint",
-  "extends": ["prettier"],
-  "plugins": ["prettier"],
+  "extends": ["prettier", "eslint:recommended"],
+  "plugins": ["prettier", "react"],
   "env": {
     "es6": true,
     "browser": true
   },
   "rules": {
     "react/jsx-uses-react": "error",
-    "react/jsx-uses-vars": "error",
-    "max-nested-callbacks": ["warn", 3]
+    "max-nested-callbacks": ["warn", 3],
+    "react/jsx-uses-vars": "error"
   }
 }
