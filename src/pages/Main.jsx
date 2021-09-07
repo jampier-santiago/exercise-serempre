@@ -26,7 +26,7 @@ export default function Main() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    document.title = "Serempre Prueba";
+    document.title = "Serempre";
 
     setTimeout(() => {
       setLoading(false);
