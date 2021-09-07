@@ -25,10 +25,11 @@ export default function Main() {
   const [price, setPrice] = useState(295.95);
   const priceData = useMemo(() => ({ price, setPrice }), [price]);
 
+  const user = "...";
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    document.title = "Serempre Prueba";
+    document.title = "Serempre";
 
     setTimeout(() => {
       setLoading(false);
