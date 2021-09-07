@@ -26,7 +26,6 @@ export default function Main() {
   const priceData = useMemo(() => ({ price, setPrice }), [price]);
 
   const user = "...";
-  const user2 = ".llll";
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
