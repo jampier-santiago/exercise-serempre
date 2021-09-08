@@ -8,6 +8,9 @@
   "extends": ["prettier", "eslint:recommended"],
   "plugins": ["prettier", "react"],
   "env": {
+    "amd": true,
+    "commonjs": true,
+    "node": true,
     "browser": true
   },
   "parserOptions": {
