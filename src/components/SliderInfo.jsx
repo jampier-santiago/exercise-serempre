@@ -1,5 +1,12 @@
 // Dependencies
 import React, { useRef } from "react";
+import {
+  ContainerSliderInfo,
+  DescriptionSliderInfo,
+  ContainerDescriptionsSlider,
+  ContainerControlsSliderInfo,
+  ControlSliderinfo,
+} from "../css/sliderInfo.style";
 
 export default function SliderInfo() {
   // Controles
@@ -62,42 +69,39 @@ export default function SliderInfo() {
   }
 
   return (
-    <section className="w-10/12 mx-auto md:max-w-lg box-border">
-      <div className="w-full flex overflow-auto overscroll-x-contain scroll-snap-x-p box-border">
-        <div className="h-10 mr-5 flex justify-start items-center flex-shrink-0">
+    <ContainerSliderInfo>
+      <ContainerControlsSliderInfo>
+        <ControlSliderinfo>
           <h3
-            className="font-medium text-xl text-gray-500 cursor-pointer text-gray-900 border-b-2 border-gray-900"
+            className='font-medium text-xl text-gray-500 cursor-pointer text-gray-900 border-b-2 border-gray-900'
             ref={control1}
-            onClick={() => addClassActive(1)}
-          >
+            onClick={() => addClassActive(1)}>
             Overview
           </h3>
-        </div>
+        </ControlSliderinfo>
 
-        <div className="h-10 mr-5 flex justify-start items-center flex-shrink-0">
+        <ControlSliderinfo>
           <h3
-            className="font-medium text-xl text-gray-500 cursor-pointer"
+            className='font-medium text-xl text-gray-500 cursor-pointer'
             ref={control2}
-            onClick={() => addClassActive(2)}
-          >
+            onClick={() => addClassActive(2)}>
             Features
           </h3>
-        </div>
+        </ControlSliderinfo>
 
-        <div className="h-10 mr-5 flex justify-start items-center flex-shrink-0">
+        <ControlSliderinfo>
           <h3
-            className="font-medium text-xl text-gray-500 cursor-pointer"
+            className='font-medium text-xl text-gray-500 cursor-pointer'
             ref={control3}
-            onClick={() => addClassActive(3)}
-          >
+            onClick={() => addClassActive(3)}>
             What's in the box?
           </h3>
-        </div>
-      </div>
+        </ControlSliderinfo>
+      </ContainerControlsSliderInfo>
 
-      <div className="w-full flex mt-2 overflow-hidden box-border">
-        <div className="w-full flex-shrink-0" ref={window1}>
-          <p className="text-gray-500 p-1 text-base font-normal text-left">
+      <ContainerDescriptionsSlider>
+        <div className='w-full flex-shrink-0' ref={window1}>
+          <DescriptionSliderInfo>
             For the past 75 years, Sennheiser has put sound first. The new
             MOMENTUM True Wireless 2 is no different. Thanks to leading audio
             technology and innovation, these new earbuds deliver the best
@@ -106,11 +110,11 @@ export default function SliderInfo() {
             personalised experience, they have been finely crafted for the most
             discerning listener and aim to simplify your life by enhancing your
             everyday.
-          </p>
+          </DescriptionSliderInfo>
         </div>
 
-        <div className="w-full flex-shrink-0" ref={window2}>
-          <p className="text-gray-500 p-1 text-base font-normal text-left">
+        <div className='w-full flex-shrink-0' ref={window2}>
+          <DescriptionSliderInfo>
             For the past 75 years, Sennheiser has put sound first. The new
             MOMENTUM True Wireless 2 is no different. Thanks to leading audio
             technology and innovation, these new earbuds deliver the best
@@ -121,11 +125,11 @@ export default function SliderInfo() {
             everyday.
             <br />
             <strong>Features</strong>
-          </p>
+          </DescriptionSliderInfo>
         </div>
 
-        <div className="w-full flex-shrink-0" ref={window3}>
-          <p className="text-gray-500 p-1 text-base font-normal text-left">
+        <div className='w-full flex-shrink-0' ref={window3}>
+          <DescriptionSliderInfo>
             For the past 75 years, Sennheiser has put sound first. The new
             MOMENTUM True Wireless 2 is no different. Thanks to leading audio
             technology and innovation, these new earbuds deliver the best
@@ -136,9 +140,9 @@ export default function SliderInfo() {
             everyday.
             <br />
             <strong>What's in the box?</strong>
-          </p>
+          </DescriptionSliderInfo>
         </div>
-      </div>
-    </section>
+      </ContainerDescriptionsSlider>
+    </ContainerSliderInfo>
   );
 }

@@ -5,6 +5,9 @@
 
 // Depencies
 import React, { useState, useContext } from "react";
+import { TitleCard, DescriptionCard } from "../css/card.style";
+
+// Context
 import Price from "../context/Price";
 
 export default function Card({ title, text, valuePrice }) {
@@ -33,23 +36,20 @@ export default function Card({ title, text, valuePrice }) {
           ? "w-full mt-5 p-5 border-2 border-gray-200 rounded-md cursor-pointer flex justify-between items-center border-blue-500"
           : "w-full mt-5 p-5 border-2 border-gray-200 rounded-md cursor-pointer flex justify-between items-center"
       }
-      onClick={addClassActive}
-    >
+      onClick={addClassActive}>
       <div
-        className="w-full"
-        style={valuePrice ? { width: "75%" } : { width: "100%" }}
-      >
-        <div className="w-full mb-2">
-          <h2 className="font-bold text-sm">{title}</h2>
+        className='w-full'
+        style={valuePrice ? { width: "75%" } : { width: "100%" }}>
+        <div className='w-full mb-2'>
+          <TitleCard>{title}</TitleCard>
         </div>
         <div
-          className="w-full"
-          style={text ? { display: "block" } : { display: "none" }}
-        >
-          <p className="text-sm font-normal text-gray-500">{text}</p>
+          className='w-full'
+          style={text ? { display: "block" } : { display: "none" }}>
+          <DescriptionCard>{text}</DescriptionCard>
         </div>
       </div>
-      <div className="section-right">
+      <div>
         <span>{valuePrice}</span>
       </div>
     </section>

@@ -10,6 +10,7 @@
   "env": {
     "amd": true,
     "commonjs": true,
+    "protractor": true,
     "node": true,
     "browser": true
   },

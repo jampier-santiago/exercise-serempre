@@ -26,6 +26,9 @@ module.exports = {
   resolve: { extensions: [".js", ".jsx", ".json"] },
   plugins: [
     new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin({ template: "./public/index.html" }),
+    new HtmlWebpackPlugin({
+      template: "./public/index.html",
+      filename: "./index.html",
+    }),
   ],
 };

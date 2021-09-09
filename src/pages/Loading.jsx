@@ -1,5 +1,8 @@
+//  Dependencies
 import React, { useEffect, useState } from "react";
+import { ContainerLoading, ContainerWordLoading } from "../css/loading.style";
 
+// Components
 import Nav from "../components/Nav";
 
 export default function Loading() {
@@ -15,23 +18,24 @@ export default function Loading() {
   }, []);
 
   return (
-    <section className='w-screen min-h-screen relative flex flex-col items-center overflow-x-hidden'>
+    <ContainerLoading>
       <Nav />
-      <div className='w-11/12 h-5/6 p-5 absolute top-2/4 flex flex-row justify-center items-center tracking-wide box-border'>
+
+      <ContainerWordLoading>
         {arrayWord &&
           arrayWord.map((item, index) => {
             return (
-              <span
+              <h2
                 className='animate-bounce text-5xl font-bold text-blue-600'
                 key={index}
                 style={{
                   animationDelay: `calc(0.1s * ${index})`,
                 }}>
                 {item}
-              </span>
+              </h2>
             );
           })}
-      </div>
-    </section>
+      </ContainerWordLoading>
+    </ContainerLoading>
   );
 }

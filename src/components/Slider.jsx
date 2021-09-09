@@ -1,5 +1,10 @@
 // Dependencies
 import React, { useRef } from "react";
+import {
+  ContainerSldier,
+  ContainerControlsSlider,
+  ContainerWindowsSlider,
+} from "../css/slider.style";
 
 // Assets
 import imagen1 from "../assets/images/imagen-1.png";
@@ -55,83 +60,77 @@ export default function Slider() {
   }
 
   return (
-    <section className="w-11/12 mx-auto mt-12 md:max-w-lg xl:w-full xl:max-w-3xl">
-      <div className="w-full h-44 md:h-80 flex border-2 border-gray-200 rounded-xl overflow-hidden">
+    <ContainerSldier>
+      <ContainerWindowsSlider>
         <div
-          className="w-full h-full flex justify-center items-center flex-shrink-0"
-          ref={window1}
-        >
+          className='w-full h-full flex justify-center items-center flex-shrink-0'
+          ref={window1}>
           <img
-            className="w-40 md:w-72"
+            className='w-40 md:w-72'
             src={imagen1}
-            alt="Imagen de los audifonos en su caja"
+            alt='Imagen de los audifonos en su caja'
           />
         </div>
         <div
-          className="w-full h-full flex justify-center items-center flex-shrink-0"
-          ref={window2}
-        >
+          className='w-full h-full flex justify-center items-center flex-shrink-0'
+          ref={window2}>
           <img
-            className="w-40 md:w-72"
+            className='w-40 md:w-72'
             src={imagen2}
-            alt="Imagen de los audifonos"
+            alt='Imagen de los audifonos'
           />
         </div>
         <div
-          className="w-full h-full flex justify-center items-center flex-shrink-0"
-          ref={window3}
-        >
+          className='w-full h-full flex justify-center items-center flex-shrink-0'
+          ref={window3}>
           <img
-            className="w-40 md:w-72"
+            className='w-40 md:w-72'
             src={imagen3}
-            alt="Imagen de los audifonos internamente"
+            alt='Imagen de los audifonos internamente'
           />
         </div>
-      </div>
+      </ContainerWindowsSlider>
 
-      <div className="mt-3 grid grid-cols-3 gap-2">
+      <ContainerControlsSlider>
         <div
-          className="w-full h-12 md:h-24 flex justify-center items-center border-2 border-gray-200 rounded-xl overflow-hidden border-gray-900 cursor-pointer"
+          className='w-full h-12 md:h-24 flex justify-center items-center border-2 border-gray-200 rounded-xl overflow-hidden border-gray-900 cursor-pointer'
           ref={control1}
           onClick={() => {
             addClassActive(1);
-          }}
-        >
+          }}>
           <img
-            className="w-12 md:w-16"
+            className='w-12 md:w-16'
             src={imagen1}
-            alt="Imagen de los audifonos en su caja"
+            alt='Imagen de los audifonos en su caja'
           />
         </div>
 
         <div
-          className="w-full h-12 md:h-24 flex justify-center items-center border-2 border-2 border-gray-200 rounded-xl cursor-pointer"
+          className='w-full h-12 md:h-24 flex justify-center items-center border-2 border-2 border-gray-200 rounded-xl cursor-pointer'
           ref={control2}
           onClick={() => {
             addClassActive(2);
-          }}
-        >
+          }}>
           <img
-            className="w-12 md:w-16"
+            className='w-12 md:w-16'
             src={imagen2}
-            alt="Imagen de los audifonos"
+            alt='Imagen de los audifonos'
           />
         </div>
 
         <div
-          className="w-full h-12 md:h-24 flex justify-center items-center border-2 border-2 border-gray-200 rounded-xl cursor-pointer"
+          className='w-full h-12 md:h-24 flex justify-center items-center border-2 border-2 border-gray-200 rounded-xl cursor-pointer'
           ref={control3}
           onClick={() => {
             addClassActive(3);
-          }}
-        >
+          }}>
           <img
-            className="w-12 md:w-16"
+            className='w-12 md:w-16'
             src={imagen3}
-            alt="Imagen de los audifonos internamente"
+            alt='Imagen de los audifonos internamente'
           />
         </div>
-      </div>
-    </section>
+      </ContainerControlsSlider>
+    </ContainerSldier>
   );
 }
